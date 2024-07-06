@@ -19,7 +19,7 @@
     "entrytooltip.tooltipscroll.uselshift": "Use left-shift for horizontal scrolling (unaffected by keybind).",
     "entrytooltip.tooltipscroll.scrolldistance": "Tooltip displacement when scrolling with the mouse.",
     "entrytooltip.tooltipscroll.scrolldistancekeys": "Tooltip displacement when moving it with the keyboard.",
-    "entrytooltip.tooltipscroll.smoothness": "How fast the tooltip should slide between positions.\nRange of (0.05 - 1) where 1 is instant.",
+    "entrytooltip.tooltipscroll.smoothness": "How fast the tooltip should slide between positions.\nRange of [0.05 - 1], where 1 is instant.",
 
     "key.tooltipscroll.moveUp": "Move Tooltip Up",
     "key.tooltipscroll.moveDown": "Move Tooltip Down",
