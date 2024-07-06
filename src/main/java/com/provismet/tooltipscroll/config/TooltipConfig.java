@@ -19,8 +19,9 @@ public class TooltipConfig {
         ConfigCategory general = builder.getOrCreateCategory(Text.translatable("category.tooltipscroll.general"));
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("entry.tooltipscroll.canScroll"), Options.canScroll)
+        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("entry.tooltipscroll.canscroll"), Options.canScroll)
             .setDefaultValue(true)
+            .setTooltip(Text.translatable("entrytooltip.tooltipscroll.canscroll"))
             .setSaveConsumer(newValue -> Options.canScroll = newValue)
             .build());
 

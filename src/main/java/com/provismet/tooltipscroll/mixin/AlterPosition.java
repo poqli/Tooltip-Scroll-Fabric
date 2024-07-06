@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(DrawContext.class)
 public abstract class AlterPosition {
 	// Allows tooltips to be moved with keybinds.
-	// It's just a QOL feature because some menus are scrollable and would be moved by the scrollwheel.
+	// It's just a QOL feature because some menus are scrollable and would be moved by the scroll wheel.
 	@Inject (method = "drawTooltip(Lnet/minecraft/client/font/TextRenderer;Ljava/util/List;IILnet/minecraft/client/gui/tooltip/TooltipPositioner;)V", at = @At("HEAD"))
 	public void applyTracker (TextRenderer textRenderer, List<TooltipComponent> components, int x, int y, TooltipPositioner positioner, CallbackInfo info) {
 		if (components.size() > 0) {
