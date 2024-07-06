@@ -32,6 +32,10 @@ public class TrackScrollWheel {
         else {
             scrollY(vertical);
         }
+
+        // Implementation for side scroll-wheels
+        if (horizontal > 0) ScrollTracker.scrollLeft();
+        else if (horizontal < 0) ScrollTracker.scrollRight();
     }
 
     @Unique
