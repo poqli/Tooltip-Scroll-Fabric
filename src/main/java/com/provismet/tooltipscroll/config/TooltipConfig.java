@@ -43,15 +43,15 @@ public class TooltipConfig {
             .setSaveConsumer(newValue -> Options.useLShift = newValue)
             .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("entry.tooltipscroll.scrollspeed"), ScrollTracker.scrollSize)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("entry.tooltipscroll.scrolldistance"), ScrollTracker.scrollSize)
             .setDefaultValue(10)
-            .setTooltip(Text.translatable("entrytooltip.tooltipscroll.scrollspeed"))
+            .setTooltip(Text.translatable("entrytooltip.tooltipscroll.scrolldistance"))
             .setSaveConsumer(newValue -> ScrollTracker.scrollSize = (int)MathHelper.absMax(1, newValue))
             .build());
         
-        general.addEntry(entryBuilder.startIntField(Text.translatable("entry.tooltipscroll.scrollspeedkeys"), ScrollTracker.scrollSizeKeyboard)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("entry.tooltipscroll.scrolldistancekeys"), ScrollTracker.scrollSizeKeyboard)
             .setDefaultValue(5)
-            .setTooltip(Text.translatable("entrytooltip.tooltipscroll.scrollspeedkeys"))
+            .setTooltip(Text.translatable("entrytooltip.tooltipscroll.scrolldistancekeys"))
             .setSaveConsumer(newValue -> ScrollTracker.scrollSizeKeyboard = (int)MathHelper.absMax(1, newValue))
             .build());
 
