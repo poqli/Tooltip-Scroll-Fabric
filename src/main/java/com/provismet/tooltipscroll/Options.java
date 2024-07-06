@@ -13,11 +13,15 @@ public abstract class Options {
     public static boolean useWASD = false;
     public static boolean resetOnUnlock = true;
     public static boolean useLShift = true;
+    public static boolean invertXScroll = false;
+    public static boolean invertYScroll = false;
 
     public static final String CAN_SCROLL = "canScroll";
     public static final String USE_WASD = "useWASD";
     public static final String RESET_ON_UNLOCK = "resetOnUnlock";
     public static final String USE_LEFT_SHIFT = "useLShift";
+    public static final String INVERT_X_SCROLL = "invertXScroll";
+    public static final String INVERT_Y_SCROLL = "invertYScroll";
     public static final String SCROLL_SPEED = "scrollSpeed";
     public static final String SCROLL_SPEED_KEYBOARD = "keyboardScrollSpeed";
     public static final String SMOOTHNESS = "scrollSmoothness";
@@ -30,6 +34,8 @@ public abstract class Options {
                 USE_WASD, useWASD,
                 RESET_ON_UNLOCK, resetOnUnlock,
                 USE_LEFT_SHIFT, useLShift,
+                INVERT_X_SCROLL, invertXScroll,
+                INVERT_Y_SCROLL, invertYScroll,
                 SCROLL_SPEED, ScrollTracker.scrollSize,
                 SCROLL_SPEED_KEYBOARD, ScrollTracker.scrollSizeKeyboard,
                 SMOOTHNESS, ScrollTracker.smoothnessModifier);
@@ -64,7 +70,15 @@ public abstract class Options {
                     case USE_LEFT_SHIFT:
                         Options.useLShift = parser.nextBoolean();
                         break;
-                    
+
+                    case INVERT_X_SCROLL:
+                        Options.invertXScroll = parser.nextBoolean();
+                        break;
+
+                    case INVERT_Y_SCROLL:
+                        Options.invertYScroll = parser.nextBoolean();
+                        break;
+
                     case SCROLL_SPEED:
                         ScrollTracker.scrollSize = (int)MathHelper.absMax(1, parser.nextInt());
                         break;
