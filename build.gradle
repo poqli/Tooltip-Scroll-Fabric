@@ -13,6 +13,7 @@ base {
 repositories {
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com" }
+	maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -29,6 +30,9 @@ dependencies {
     }
 
 	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+	modImplementation "com.github.Provismet:lilylib:${project.lilylib_version}"
+	include "com.github.Provismet:lilylib:${project.lilylib_version}"
 }
 
 processResources {
