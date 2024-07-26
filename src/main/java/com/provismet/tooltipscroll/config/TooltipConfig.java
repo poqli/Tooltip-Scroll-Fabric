@@ -43,6 +43,18 @@ public class TooltipConfig {
             .setSaveConsumer(newValue -> Options.useLShift = newValue)
             .build());
 
+        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("entry.tooltipscroll.invertxscroll"), Options.invertXScroll)
+                .setDefaultValue(false)
+                .setTooltip(Text.translatable("entrytooltip.tooltipscroll.invertxscroll"))
+                .setSaveConsumer(newValue -> Options.invertXScroll = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("entry.tooltipscroll.invertyscroll"), Options.invertYScroll)
+                .setDefaultValue(false)
+                .setTooltip(Text.translatable("entrytooltip.tooltipscroll.invertyscroll"))
+                .setSaveConsumer(newValue -> Options.invertYScroll = newValue)
+                .build());
+
         general.addEntry(entryBuilder.startIntField(Text.translatable("entry.tooltipscroll.scrolldistance"), ScrollTracker.scrollSize)
             .setDefaultValue(10)
             .setTooltip(Text.translatable("entrytooltip.tooltipscroll.scrolldistance"))
